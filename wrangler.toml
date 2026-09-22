@@ -1,0 +1,6 @@
+name = "kambam-vip"
+compatibility_date = "2026-09-22"
+
+[assets]
+directory = "./app/static"
+not_found_handling = "single-page-application"

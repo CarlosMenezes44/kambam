@@ -64,3 +64,10 @@ server {
 - Criar o arquivo de token IXC no servidor em `.openclaw/secrets/ixc_api_token.txt`, dentro da pasta raiz do projeto implantado.
 - Criar backup automatico dos logs de auditoria.
 - Testar escrita IXC primeiro em OS controlada.
+
+## Cloudflare
+
+O arquivo `wrangler.toml` publica os arquivos estáticos em `app/static` com `npx wrangler deploy`.
+O Cloudflare Workers não executa este backend FastAPI diretamente. Para o Kanban funcionar
+com login e endpoints `/api`, mantenha o FastAPI em um servidor compatível (VPS, Render ou
+Railway) e configure o frontend para usar a URL pública desse backend.
